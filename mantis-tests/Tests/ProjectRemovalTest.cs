@@ -20,6 +20,7 @@ namespace mantis_tests
                 Description = "Create Test Automatically",
             };
 
+            application.Login.Login(account);
             application.Project.IsProjectPresent(project, account);
 
             application.Navigate.OpenProjectMenu();

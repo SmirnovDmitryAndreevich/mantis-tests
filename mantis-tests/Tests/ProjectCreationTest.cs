@@ -16,6 +16,7 @@ namespace mantis_tests
                 Name = "Test",
                 Description = "Create Test Automatically",
             };
+            application.Login.Login(account);
             application.Navigate.OpenProjectMenu();
             List<ProjectData> oldData = application.Project.GetProjectList();
 

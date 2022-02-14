@@ -15,7 +15,6 @@ namespace mantis_tests
 
         public void Create(ProjectData project, AccountData account)
         {
-            manager.Login.Login(account);
             manager.Navigate.OpenProjectMenu();
             InitProjectCreation();
             FillProjectData(project);
@@ -41,7 +40,6 @@ namespace mantis_tests
 
         public void Remove(AccountData account)
         {
-            manager.Login.Login(account);
             manager.Navigate.OpenProjectMenu();
             manager.Navigate.OpenProjectMenu();
             OpenProject();
@@ -93,6 +91,7 @@ namespace mantis_tests
 
         public void IsProjectPresent(ProjectData project, AccountData account)
         {
+            manager.Navigate.OpenProjectMenu();
             if (GetProjectCount() == 0)
             {
                 Create(project, account);
