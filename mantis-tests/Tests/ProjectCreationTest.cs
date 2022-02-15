@@ -7,13 +7,14 @@ namespace mantis_tests
     [TestFixture]
     public class ProjectCreationTests : TestBase
     {
+        public static Random rnd = new Random();
         [Test]
         public void ProjectCreationTest()
         {
             AccountData account = new AccountData("administrator", "root");
             ProjectData project = new ProjectData()
             {
-                Name = "Test",
+                Name = $"Test{rnd.Next(0, 9999)}",
                 Description = "Create Test Automatically",
             };
             application.Login.Login(account);

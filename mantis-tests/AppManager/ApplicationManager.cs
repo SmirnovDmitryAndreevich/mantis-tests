@@ -15,6 +15,7 @@ namespace mantis_tests
         private ApplicationManager()
         {
             driver = new ChromeDriver();
+            driver.Manage().Window.Maximize();
             baseURL = "http://localhost";
             Registration = new RegistrationHelper(this);
             Ftp = new FtpHelper(this);

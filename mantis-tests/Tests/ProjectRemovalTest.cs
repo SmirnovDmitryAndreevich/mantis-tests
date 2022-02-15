@@ -7,7 +7,7 @@ namespace mantis_tests
     [TestFixture]
     public class ProjectRemovalTests : TestBase
     {
-        public static Random r = new Random();
+        public static Random rnd = new Random();
 
         [Test]
         public void ProjectRemovalTest()
@@ -16,7 +16,7 @@ namespace mantis_tests
 
             ProjectData project = new ProjectData()
             {
-                Name = "TestToRemove",
+                Name = $"TestToRemove {rnd.Next(0, 9999)}",
                 Description = "Create Test Automatically",
             };
 

@@ -9,7 +9,7 @@ namespace mantis_tests
         public void OpenProjectMenu()
         {
             // Вариант, который работает, но он не правильный, так как использует прямой путь.
-            driver.Navigate().GoToUrl("http://localhost/mantisbt-2.25.2/manage_overview_page.php");
+            driver.Navigate().GoToUrl("http://localhost/mantisbt-2.25.2/manage_proj_page.php");
 
             //// Ручной вариант, как должен компьютер найти кнопку и нажать на нее.
             //driver.FindElement(By.XPath("//a[@href= '/mantisbt-2.25.2/manage_overview_page.php']")).Click();
