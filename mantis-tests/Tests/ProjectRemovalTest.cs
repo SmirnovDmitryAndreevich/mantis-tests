@@ -24,12 +24,12 @@ namespace mantis_tests
             application.Project.IsProjectPresent(project, account);
 
             application.Navigate.OpenProjectMenu();
-            List<ProjectData> oldData = application.Project.GetProjectList();
+            List<ProjectData> oldData = application.Project.GetProjectList(account);
             ProjectData projectToRemove = oldData[0];
 
             application.Project.Remove(account);
 
-            List<ProjectData> newData = application.Project.GetProjectList();
+            List<ProjectData> newData = application.Project.GetProjectList(account);
 
             Assert.AreEqual(oldData.Count - 1, newData.Count);
 
